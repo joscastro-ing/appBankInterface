@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group1.controller.SignUpController">
+   <children>
+      <Label layoutX="246.0" layoutY="25.0" text="Sign UP">
+         <font>
+            <Font name="SansSerif Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="100.0" prefHeight="28.0" prefWidth="97.0" text="Name">
+         <font>
+            <Font name="SansSerif" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameSignUp" layoutX="35.0" layoutY="128.0" prefHeight="25.0" prefWidth="250.0" />
+      <Label layoutX="357.0" layoutY="102.0" prefHeight="28.0" prefWidth="97.0" text="Lastname">
+         <font>
+            <Font name="SansSerif" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lastnameSignUp" layoutX="357.0" layoutY="130.0" prefHeight="25.0" prefWidth="250.0" />
+      <Label layoutX="33.0" layoutY="166.0" prefHeight="28.0" prefWidth="97.0" text="Email">
+         <font>
+            <Font name="SansSerif" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailSignUp" layoutX="33.0" layoutY="194.0" prefHeight="25.0" prefWidth="250.0" />
+      <Label layoutX="357.0" layoutY="168.0" prefHeight="28.0" prefWidth="97.0" text="Password">
+         <font>
+            <Font name="SansSerif" size="20.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordSignUp" layoutX="357.0" layoutY="196.0" onKeyTyped="#passwordKey" prefWidth="250.0" />
+      <Label layoutX="35.0" layoutY="235.0" prefHeight="28.0" prefWidth="97.0" text="Cellphone">
+         <font>
+            <Font name="SansSerif" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cellSignUp" layoutX="33.0" layoutY="265.0" prefHeight="25.0" prefWidth="250.0" />
+      <Button fx:id="buttonSignUp" layoutX="262.0" layoutY="322.0" mnemonicParsing="false" onAction="#actionSignUp" prefHeight="56.0" prefWidth="122.0" text="Sign up">
+         <font>
+            <Font name="SansSerif" size="14.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="typeAccount" layoutX="355.0" layoutY="278.0" onShowing="#createList" prefHeight="25.0" prefWidth="250.0" promptText="Type Account" visibleRowCount="2" />
+      <Hyperlink fx:id="signInLink" layoutX="43.0" layoutY="378.0" onMouseClicked="#signInClick" text="Log In">
+         <font>
+            <Font name="SansSerif" size="14.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="355.0" layoutY="249.0" prefHeight="28.0" prefWidth="58.0" text="Amount">
+         <font>
+            <Font name="SansSerif" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="amount" layoutX="415.0" layoutY="251.0" onKeyTyped="#amountKey" prefHeight="25.0" prefWidth="191.0" />
+   </children>
+</Pane>
