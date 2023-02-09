@@ -23,9 +23,6 @@ public abstract class Account {
         this.user = user;
     }
 
-    public static Account createAccount(double balance, User usuario) {
-        return null;
-    }
 
     public abstract String history();
 
@@ -33,7 +30,7 @@ public abstract class Account {
         setAccountNumber(generator++);
     }
 
-    public void deleteAccount(){
+   /* public void deleteAccount(){
         for (Account account1 : getUser().getAccounts()) {
             if(account1.getAccountNumber() == getAccountNumber()) {
                 user.getAccounts().remove(account1);
@@ -44,7 +41,7 @@ public abstract class Account {
             }
             break;
         }
-    }
+    }*/
     public void setMovements(Transaction t) {
         getMovements().add(t);
     }

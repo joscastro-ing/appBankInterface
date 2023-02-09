@@ -1,6 +1,7 @@
 package com.group1.controller;
 
 import com.group1.model.Account;
+import com.group1.model.Mailing;
 import com.group1.model.Transaction;
 import com.group1.model.User;
 import javafx.event.ActionEvent;
@@ -46,6 +47,7 @@ public class TransactionController {
                         alert.show();
                         break out;
                     }else {
+                        Mailing.sendEmail(HomeController.userActive.getEmail(), transaction.toString());
                         Alert alert = new Alert(Alert.AlertType.NONE, "Successful transaction" + "\n" + transaction.toString(), ButtonType.OK);
                         alert.show();
                         validTrans = false;

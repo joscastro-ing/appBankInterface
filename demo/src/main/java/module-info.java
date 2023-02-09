@@ -6,6 +6,7 @@ module com.example.demo {
     requires com.dlsc.formsfx;
     requires validatorfx;
     requires lombok;
+    requires java.mail;
 
     opens com.group1 to javafx.fxml;
     exports com.group1;

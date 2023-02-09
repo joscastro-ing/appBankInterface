@@ -54,6 +54,7 @@ public class SignUpController {
                 || emailSignUp.getText().isEmpty()
                 || cellSignUp.getText().isEmpty()
                 || amount.getText().isEmpty()
+                || typeAccount.getSelectionModel().isEmpty()
         ){
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "You must to fill all fields");
             alert.show();
