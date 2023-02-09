@@ -85,7 +85,7 @@ public class SignUpController {
             Alert alert = new Alert(Alert.AlertType.INFORMATION, user.toString() + "\n" + user.getAccounts().get(0).toString());
             alert.show();
             alert.setOnCloseRequest(ev ->{
-                HomeController.loadStage("Home.fxml", event);
+                ChangePage.loadStage("Home.fxml", event);
             });
         }
     }
@@ -113,7 +113,7 @@ public class SignUpController {
 
     @FXML
     private void signInClick(MouseEvent click){
-        HomeController.loadStage("Home.fxml", click);
+        ChangePage.loadStage("Home.fxml", click);
     }
 
 }

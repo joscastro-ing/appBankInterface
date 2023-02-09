@@ -25,7 +25,7 @@ public class CreateNewAccountController {
 
     @FXML
     public void cancelCreateAccount(Event event){
-        HomeController.loadStage("Account.fxml", event);
+        ChangePage.loadStage("Account.fxml", event);
 
     }
     @FXML

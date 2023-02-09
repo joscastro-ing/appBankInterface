@@ -60,7 +60,7 @@ public class AccountController {
     }
     @FXML
     public void makeTransaction(ActionEvent event){
-        HomeController.loadStage("Transaction.fxml", event);
+        ChangePage.loadStage("Transaction.fxml", event);
         for(Account account: HomeController.userActive.getAccounts()){
             String accountNumber = String.valueOf(account.getAccountNumber());
             if(accountNumber.equals(numAccount.getText())){
@@ -70,7 +70,7 @@ public class AccountController {
     }
     @FXML
     public void makeDeposite(ActionEvent event){
-        HomeController.loadStage("Deposite.fxml", event);
+        ChangePage.loadStage("Deposite.fxml", event);
     }
     @FXML
     public void showHistory(ActionEvent event){
@@ -79,11 +79,11 @@ public class AccountController {
     }
     @FXML
     public void logOutAccount(MouseEvent event){
-        HomeController.loadStage("Home.fxml", event);
+        ChangePage.loadStage("Home.fxml", event);
     }
     @FXML
     public void createNewAccount(ActionEvent event){
-        HomeController.loadStage("CreateAccount.fxml", event);
+        ChangePage.loadStage("CreateAccount.fxml", event);
     }
 
     public ArrayList<String> browseAccounts(ArrayList<Account> accounts){

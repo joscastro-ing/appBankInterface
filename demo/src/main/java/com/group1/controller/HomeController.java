@@ -68,7 +68,7 @@ public class HomeController {
             for(User user: SignUpController.users){
                 if((user.getEmail().equals(userLogIn.getText())) && (user.getPassword().equals(passwordLogIn.getText()))){
                     userActive = user;
-                    loadStage("Account.fxml", event);
+                    ChangePage.loadStage("Account.fxml", event);
                     valid = false;
                     break out;
                 }else{
@@ -84,26 +84,8 @@ public class HomeController {
     }
     @FXML
     private void signUpClick(MouseEvent click){
-        loadStage("SignUp.fxml", click);
+        ChangePage.loadStage("SignUp.fxml", click);
     }
 
-    public static void loadStage(String url, Event event) {
-        try {
-            ((Node) (event.getSource())).getScene().getWindow().hide();
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(url));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.show();
 
-            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-                @Override
-                public void handle(WindowEvent windowEvent) {
-                    Platform.exit();
-                }
-            });
-        }catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }

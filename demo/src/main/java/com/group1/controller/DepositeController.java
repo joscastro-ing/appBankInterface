@@ -13,7 +13,7 @@ public class DepositeController {
 
     @FXML
     public void cancelDeposit(Event event){
-        HomeController.loadStage("Account.fxml", event);
+        ChangePage.loadStage("Account.fxml", event);
     }
     @FXML
     public void depositDone(ActionEvent event){

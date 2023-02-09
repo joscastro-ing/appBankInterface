@@ -22,7 +22,7 @@ public class TransactionController {
 
     @FXML
     public void returnToAccount(MouseEvent event){
-        HomeController.loadStage("Account.fxml", event);
+        ChangePage.loadStage("Account.fxml", event);
     }
 
     @FXML
